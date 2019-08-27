@@ -16,6 +16,10 @@ public class HomePage extends TestBase {
 
 	@FindBy(xpath = "//a[contains(text(),'ACCOUNTS')]")
 	WebElement ACCOUNTS;
+	
+	@FindBy(xpath = "//a[contains(text(),'NEWS')]")
+	WebElement News;
+	
 	@FindBy(xpath="//a[contains(text(),'PORTFOLIO')]")
 	WebElement PORTFOLIO;
 
@@ -111,25 +115,25 @@ public class HomePage extends TestBase {
 	
 	public TradeNowPage ClickOnTradeNow() throws InterruptedException{
 		TRADENOW.click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		return new TradeNowPage();
 		}
 	
 	public  ResearchPage clickOnReaserch() throws InterruptedException{
 		Research.click();
-	Thread.sleep(2000);
+	Thread.sleep(5000);
 		return new ResearchPage();
 	}
 
 	public  AccountPage clickOnAccount() throws InterruptedException{
 		ACCOUNTS.click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 
 		return new AccountPage();
 	}
 	public ReportsPages ClickOnReports() throws InterruptedException{
 		REPORTS.click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 
 		return new ReportsPages();
 	}
@@ -166,6 +170,18 @@ public class HomePage extends TestBase {
 		OptionChain.click();
 		Thread.sleep(5000);
 		return new OptionChainPage();
+		
+	}
+	public NewsPage clickOnNews() throws InterruptedException{
+		News.click();
+		Thread.sleep(5000);
+		return new NewsPage();
+		
+	}
+	public CS_Page clickOnCS() throws InterruptedException{
+		ContactUs.click();
+		Thread.sleep(5000);
+		return new CS_Page();
 		
 	}
 	

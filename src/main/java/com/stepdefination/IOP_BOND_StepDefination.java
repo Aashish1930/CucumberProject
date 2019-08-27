@@ -3,19 +3,24 @@ package com.stepdefination;
 import com.base.TestBase;
 import com.pages.HomePage;
 import com.pages.IPO_BOND_Page;
+import com.pages.LoginPage;
 
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Then;
 
 public class IOP_BOND_StepDefination extends TestBase {
 
 	HomePage homepage;
 	IPO_BOND_Page IOPBOND;
-	
+
+
+
 	@Then("^user click on BondPage$")
 	public void user_click_on_BondPage() throws InterruptedException {
-		homepage= new HomePage();
-		IOPBOND=homepage.ClickONIPO_BOND_Page();
-		
+		homepage = new HomePage();
+		IOPBOND = homepage.ClickONIPO_BOND_Page();
+
 	}
 
 	@Then("^Check User On BOND page$")

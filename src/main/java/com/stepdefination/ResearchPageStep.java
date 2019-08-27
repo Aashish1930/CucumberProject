@@ -22,9 +22,9 @@ public void user_click_on_Research_Button() throws InterruptedException  {
 	Research=homepage.clickOnReaserch();
 }
 
-@Then("^Reseach Page Display and  Validating Properly$")
-public void reseach_Page_Display_and_Validating_Properly() {
-  Research.ResearchTitile();
+@Then("^Research display$")
+public void research_display() throws Throwable {
+	Research.ResearchTitile();
 }
 
 @Then("^Verify All Link Display$")

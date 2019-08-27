@@ -30,6 +30,13 @@ public class LoginPage extends TestBase {
 	@FindBy(xpath = "//a[@class='blk-sm-button']")
 	WebElement switchpage;
 
+	@FindBy(xpath = "//a[contains(text(),'Logout')]")
+	WebElement Logout;
+	
+	@FindBy(xpath = "	//*[@id=\"mainHeader\"]/div/div[2]/div[2]/div/ul/li[1]/a[1]")
+	WebElement Login;
+	
+	
 	
 	
 	public LoginPage() {
@@ -55,6 +62,20 @@ public HomePage login(String user,String pass) throws InterruptedException{
 		return new HomePage(); 
 		
 		}
+
+public void Logout(){
+	try {
+
+		Logout.click();
+		if(Login.getText()=="Login/Trade Now"){
+			System.out.println("Logout success");
+			
+		}
+	} catch (Exception e) {
+		System.out.println("Logout-Fail");
+		
+	}
+}
 	
 	
 	

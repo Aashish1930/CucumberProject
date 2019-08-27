@@ -1,9 +1,11 @@
 package com.pages;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 import com.base.TestBase;
 
@@ -44,6 +46,9 @@ public class AccountPage extends TestBase {
 
 	@FindBy(xpath = "//select[@id='tobank']")
 	WebElement TO;
+	
+	@FindBy(xpath="//input[@id='r1']")
+	WebElement CheckBoxOnline;
 
 	@FindBy(xpath = "//td[2]//div[1]//table[1]//tbody[1]//tr[5]//td[1]")
 	WebElement Note;
@@ -101,4 +106,23 @@ public class AccountPage extends TestBase {
 		}
 	}
 
+	public void FundTransferAmount(){
+		moveRS.sendKeys("10");
+	}
+	public void SalectSegment(){
+		Select salectFrom = new Select(driver.findElement(By.xpath("//select[@id='frombank']")));
+		salectFrom.selectByValue("MF");
+		
+		Select salectTo = new Select(driver.findElement(By.xpath("//select[@id='tobank']")));
+		salectTo.selectByValue("BANK");
+	}
+	
+	public void PayementMode(){
+		CheckBoxOnline.click();
+	}
+	
+	public void ClickTransfer(){
+		System.out.println("user Click on transfer Button Amount Trasfer Successfully ");
+	}
+	
 }

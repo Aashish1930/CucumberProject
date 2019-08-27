@@ -33,13 +33,13 @@ public class TradenowStepDefination extends TestBase{
 
 	@Then("^User Verify All Left Panel Link$")
 	public void user_Verify_All_Left_Panel_Link() throws InterruptedException  {
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	 tradenow.Verift_Left_panel_Link();
 	}
 
 	@Then("^user Verify New Order Form$")
 	public void user_Verify_New_Order_Form() throws InterruptedException  {
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	 tradenow.VerifyNewOrderForm();
 	}
 

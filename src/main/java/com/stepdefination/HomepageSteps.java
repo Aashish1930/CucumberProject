@@ -65,7 +65,13 @@ public class HomepageSteps extends TestBase {
 		profilepage.VerifyAllLinkOnProfilePage();
 	}
 
-	
+	@Then("^Check user properly Logout$")
+	public void check_user_properly_Logout() throws Throwable {
+		loginpage= new LoginPage();
+		loginpage.Logout();
+	}
+
+
 	
 	
 	

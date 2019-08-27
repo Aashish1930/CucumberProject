@@ -42,5 +42,39 @@ public class AccountStepDefination extends TestBase {
 		Thread.sleep(2000);
 		Account.FundTransferLink();
 	}
+	
+	//------------------------------------FundTransfer Scenario Strat------------------------------------------
+	
+	
+	@Then("^User click on AccountButton$")
+	public void user_click_on_AccountButton() throws InterruptedException  {
+		homepage= new HomePage();
+		Account=homepage.clickOnAccount();
+	   
+	}
+
+	@Then("^User Enter SomeAmout To beTransfered$")
+	public void user_Enter_SomeAmout_To_beTransfered()  {
+		Account.FundTransferAmount();
+	}
+
+	@Then("^User Salect Segment FROM and TO$")
+	public void user_Salect_Segment_FROM_and_TO()  {
+		Account.SalectSegment();
+	}
+
+	@Then("^user Salect Payment Mode By Online$")
+	public void user_Salect_Payment_Mode_By_Online()  {
+		Account.PayementMode();
+	}
+
+	@Then("^User Click OnTraseferButton$")
+	public void user_Click_OnTraseferButton()  {
+		Account.ClickTransfer();
+	}
+
+
+	
+	
 
 }

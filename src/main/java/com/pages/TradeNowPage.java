@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.TestBase;
+import com.stepdefination.TradenowStepDefination;
 
 import junit.framework.Assert;
 
@@ -106,7 +107,7 @@ public class TradeNowPage extends TestBase {
 		try {
 			Assert.assertEquals(Text, "New Order Form");
 		} catch (Exception e) {
-			//collector.addError(e);
+			collector.addError(e);
 			System.out.println(Text + "Not Equal");
 		}
 
@@ -125,8 +126,8 @@ public class TradeNowPage extends TestBase {
 
 				Assert.assertTrue(Arr[i]);
 			}
-		} catch (Exception e) {
-			//collector.addError(e);
+		} catch (Throwable e) {
+			collector.addError(e);
 		}
 
 	}
@@ -143,8 +144,8 @@ public class TradeNowPage extends TestBase {
 			for (int i = 0; i < Arr.length; i++) {
 				Assert.assertEquals(Arr[i], true);
 			}
-		}catch (Exception e) {
-			//collector.addError(e);
+		}catch (Throwable e) {
+			collector.addError(e);
 		}
 
 	}
